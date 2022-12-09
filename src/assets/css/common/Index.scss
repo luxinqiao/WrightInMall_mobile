@@ -1,0 +1,143 @@
+#wm_index {
+    height: 100%;
+    >header {
+        position: fixed; z-index:1;
+        left: 0;
+        top: 0;
+        width: 100%; height: 0.44rem;
+        box-sizing: content-box;
+        .box {
+            position: relative;
+            width: 100%; height: 0.44rem;
+            text-align: center; line-height: 0.44rem;
+            font-size: 0.2rem;
+            background-color: #fff;
+            font-weight: bold;
+            .back {
+                position: absolute;
+                left: 0;
+                height: 0.44rem;
+                padding: 0 0.12rem;
+                line-height: 0.44rem;
+                color: white;
+                display: flex; justify-content: center; align-items: center;
+                >img {
+                    width: 0.1rem; height: 0.16rem;
+                }
+            }
+            .share {
+                position: absolute;
+                right: 0; top: 0;
+                height: 0.44rem;
+                padding: 0 0.12rem;
+                line-height: 0.44rem;
+                display: flex; justify-content: center; align-items: center;
+                >img {
+                    width: 0.2rem; height: 0.2rem;
+                }
+            }
+        }
+    }
+    >#wm_contain {
+        background-color: #fff;
+    }
+    >footer {
+        background-color: #fff;
+        position: fixed; z-index:1;
+        bottom: 0;
+        width: 100%; height: 0.5rem;
+        display: flex;
+        align-items: center; justify-content: space-around;
+        box-shadow: 0px 2px 9px 0px rgba(102, 102, 102, 0.19);
+        >div {
+            font-size: 0.1rem;
+            width: 30%; height: 0.5rem;
+            padding-top: 0.3rem;
+            margin-top: 0.02rem;
+            text-align: center;
+            background-repeat: no-repeat;
+            background-position: center 3px;
+        }
+        >div:nth-child(1) {
+            background-size: 0.26rem 0.26rem;
+            background-image: url(../../assets/images/tab/mall.png);
+        }
+        >div:nth-child(1).active {
+            color: #ef5e8f;
+            background-image: url(../../assets/images/tab/mall-active.png);
+        }
+        >div:nth-child(2) {
+            background-size: 0.26rem 0.26rem;
+            background-image: url(../../assets/images/tab/my.png);
+        }
+        >div:nth-child(2).active {
+            color: #ef5e8f;
+            background-image: url(../../assets/images/tab/my-active.png);
+        }
+    }
+}
+#wm_index.browser {
+    >header {
+        border-bottom: 1px solid #f8f8f8;
+        background-color: white; color: #000;
+        >.back {
+            color: #000;
+        }
+    }
+    >#wm_contain {
+        padding-top: 0.44rem; padding-bottom: 0.44rem;
+    }
+    >footer {
+        border-top: 1px solid #f8f8f8;
+        background-color: white;
+    }
+}
+#wm_index.app {
+    >header {
+        border-bottom: 1px solid #f8f8f8;
+        background-color: white; color: #000;
+        >.back {
+            color: #000;
+        }
+    }
+    >#wm_contain {
+        padding-top: 0.44rem; padding-bottom: 0;
+    }
+    >footer {
+        display: none;
+    }
+}
+#wm_index.wechat {
+    >header {
+        display: none;
+    }
+    >#wm_contain {
+        padding-top: 0; padding-bottom: 0.44rem;
+    }
+    >footer {
+        border-top: 1px solid #f8f8f8;
+        background-color: white;
+    }
+}
+#wm_index.doctor.browser, #wm_index.doctor.app {
+    >header {
+        background-color: #26c2c4; color: white;
+        >.back {
+            color: white;
+        }
+    }
+    >#wm_contain {
+        padding-top: 0.44rem;
+    }
+    >footer {
+        display: none;
+    }
+}
+#wm_index.noFooter {
+    >#wm_contain {
+        padding-bottom: 0 !important;
+    }
+    >footer {
+        display: none !important;
+    }
+}

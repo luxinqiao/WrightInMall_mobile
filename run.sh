@@ -1,0 +1,1 @@
+cnpm run build && cp MP_verify_sxnyR1F7VaakQyPE.txt dist/ && cp dj9CDnBwT4.txt dist/ 
